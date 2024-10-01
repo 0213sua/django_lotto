@@ -22,5 +22,6 @@ urlpatterns = [
     #path('',views.index), #views.py 의 index()함수 호출
     path('hello/',views.hello, name="hello_main"),
     path('lotto/', views.index, name = 'index'), # 'http://127.0.0.1/hello/'   
-    path('lotto/new/', views.post, name = "new_lotto")
+    path('lotto/new/', views.post, name = "new_lotto"),
+    path('lotto/<int:lottokey>/detail', views.detail, name='detail'),
 ]
